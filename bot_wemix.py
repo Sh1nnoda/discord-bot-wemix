@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 async def pegar_dados_wemix():
-    url = 'url = 'https://api.coingecko.com/api/v3/coins/wemix-token?localization=false&tickers=false&market_data=true''
+    url = 'https://api.coingecko.com/api/v3/coins/wemix-token?localization=false&tickers=false&market_data=true'
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             data = await response.json()
